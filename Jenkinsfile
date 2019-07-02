@@ -19,8 +19,10 @@ pipeline {
                 sh './jenkins/scripts/test.sh' 
             }
         }
-        stage('Sanity check'){
-            input "确认要部署吗？"
+        stage('Sanity check') {
+            steps {
+                input "确认要部署吗？"
+            }
         }
     }
 }
